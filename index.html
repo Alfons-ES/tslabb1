@@ -10,17 +10,19 @@
 
 <body>
   <div id="app">
-    <div>
+    <div id="inputs">
       <input type="text" placeholder="Kurskod" id="code">
       <input type="text" placeholder="Namn" id="name">
       <input type="text" placeholder="Progression (A, B eller C)" id="progression">
-      <input type="text" placeholder="URL" id="syllabus">
+      <input type="text" value="https://"
+        placeholder="https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/DT224G/" id="syllabus">
     </div>
     <div>
       <button id="add">
         <p>Lägg till</p>
       </button>
     </div>
+    <p id="feedback">Fyll i rutorna ovan och klicka på "lägg till"</p>
     <div id="output">
       <table id="outputTable">
         <tr>
