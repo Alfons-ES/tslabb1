@@ -22,8 +22,10 @@ interface CourseInfo {
 
   if (tempCode === "" || tempName === "" || tempProgression === "" || tempSyllabus === "") {
     console.log("fyll i alla rutor")
+    return;
   } else if (tempProgression !== "A" && tempProgression !== "B" && tempProgression !== "C") {
     console.log("felaktig progression")
+    return;
   } else {
     console.log("ifyllt korrekt")
   }
@@ -36,9 +38,22 @@ interface CourseInfo {
     syllabus: tempSyllabus,
   }
 
-  //använd CourseInfo för const Input : CourseInfo = temp + temp + temp + temp
+  console.log(course)
 
-  //lägg ut input till sidan
+  const output = (document.getElementById("outputTable") as HTMLTableElement)
+
+
+  output.innerHTML += `
+  <tr>
+    <td>${course.code}</td>
+    <td>${course.name}</td>
+    <td>${course.progression}</td>
+    <td>${course.syllabus}</td>
+  </tr>
+  `
+
+
+
   //lägg till Input i localstorage
 
 
