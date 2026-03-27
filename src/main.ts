@@ -93,3 +93,10 @@ function loadCourses(): void {
 
 
 });
+
+
+(document.getElementById("remove") as HTMLButtonElement).addEventListener("click", () => {
+
+  localStorage.removeItem("courses")
+  output.innerHTML += ""
+});
