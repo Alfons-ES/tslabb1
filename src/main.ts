@@ -98,5 +98,10 @@ function loadCourses(): void {
 (document.getElementById("remove") as HTMLButtonElement).addEventListener("click", () => {
 
   localStorage.removeItem("courses")
-  output.innerHTML += ""
+  output.innerHTML = `<tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Progression</th>
+          <th>Syllabus</th>
+        </tr>`
 });
