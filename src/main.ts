@@ -21,9 +21,19 @@ interface CourseInfo {
   const tempSyllabus: string = (document.getElementById("syllabus") as HTMLInputElement).value;
 
   if (tempCode === "" || tempName === "" || tempProgression === "" || tempSyllabus === "") {
-    console.log("tomt i code")
+    console.log("fyll i alla rutor")
+  } else if (tempProgression !== "A" && tempProgression !== "B" && tempProgression !== "C") {
+    console.log("felaktig progression")
   } else {
     console.log("ifyllt korrekt")
+  }
+
+
+  const course: Partial<CourseInfo> = {
+    code: tempCode,
+    name: tempName,
+    progression: tempProgression as "A" | "B" | "C",
+    syllabus: tempSyllabus,
   }
 
   //använd CourseInfo för const Input : CourseInfo = temp + temp + temp + temp
